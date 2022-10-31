@@ -1,0 +1,11 @@
+def delete(list_, index=-1):
+    if index < 0:
+        index = len(list_) + index
+    return list_[:index] + list_[index + 1:]
+
+
+print(delete([0, 0, 1, 2], index=0))
+print(delete([0, 1, 1, 2, 3], index=1))
+print(delete([0, 1, 2, 3, 4, 4]))
+print(delete([0, 1, 2, 3, 4], index=-1))
+print(delete([0, 0, 1, 2, 3, 4, 5], index=-3))
